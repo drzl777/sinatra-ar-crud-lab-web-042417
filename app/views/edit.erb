@@ -1,0 +1,10 @@
+<h1><%=@post.name%></h1>
+<p><%=@post.content%></p>
+
+<form action="/posts/<%=@post.id%>" method="post">
+  <h2>Edit Post</h2>
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <p>Author Name: <input type="text" name="name" value=""></p>
+  <p>Content: <input type="text" name="content" value=""></p>
+  <button type="submit">submit</button>
+</form>
